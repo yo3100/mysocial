@@ -6,6 +6,7 @@ export default function input() {
     return (
         <div className="flex  border-b border-gray-200 p-3 space-x-3">
             <Avatar
+                circle="true"
                 src="https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGlvbiUyMGhlYWR8ZW58MHx8MHx8&w=1000&q=80"
                 alt="user-img"
                 className="h-11 w-11 rounded-full cursor-pointer hover:brightness-95"
