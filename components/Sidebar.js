@@ -18,12 +18,12 @@ import { Avatar } from '@nextui-org/react';
 
 function Sidebar() {
     return (
-        <div className="hidden sm:flex flex-col p-2 xl:items-start fixed h-full xl:ml-24 bg-black text-white">
+        <div className="hidden sm:flex flex-col p-2 xl:items-start fixed h-full xl:ml-24 bg-white border-r">
 
             {/* Logo */}
             <div className="hoverEffect p-0 hover:bg-blue-100 xl:px-1">
                 <Image
-                    src="https://www.seekpng.com/png/detail/889-8892859_money-tree-vector-art.png"
+                    src="https://img.freepik.com/free-vector/cool-duck-summer-cartoon-vector-icon-illustration-animal-holiday-icon-concept-isolated-premium-vector-flat-cartoon-style_138676-3651.jpg?w=740&t=st=1674764356~exp=1674764956~hmac=c6d735fae1a44c269d9340d17955152f0fb2fe67f9ff36b1aa57e4a3206d2c14"
                     width="50"
                     height="50"
                 />
