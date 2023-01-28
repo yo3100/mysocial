@@ -1,9 +1,12 @@
 import Feed from '@/components/Feed'
+import RightSideBar from '@/components/RightSideBar'
 import Sidebar from '@/components/Sidebar'
+
+
 import Head from 'next/head'
 
 
-export default function Home() {
+export default function Home({randomUsersResults}) {
   return (
     <div>
       <Head>
@@ -12,23 +15,42 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        {/* Side Bar */}
+      <main className="flex min-h-screen mx-auto">
         <Sidebar />
 
-
-        {/* Feed */}
         <Feed />
 
-
-
-        {/* Widgets */}
-
-
-        {/* Modal */}
+        <RightSideBar
+         randomUsersResults={randomUsersResults.results}
+        />
 
       </main>
 
     </div>
   )
+}
+
+export async function getServerSideProps() {
+  // Who to follow section
+  // let randomUsersResults = [];
+
+  // try {
+  //   const res = await fetch(
+  //     "https://randomuser.me/api/?results=30&inc=name,login,picture"
+  //   );
+
+  //   randomUsersResults = await res.json();
+  // } catch (e) {
+  //   randomUsersResults = [];
+  // }
+
+  const randomUsersResults = await fetch(
+    "https://randomuser.me/api/?results=30&inc=name,login,picture"
+  ).then((res) => res.json());
+
+  return {
+    props: {
+      randomUsersResults,
+    },
+  };
 }

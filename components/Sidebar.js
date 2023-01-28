@@ -19,7 +19,7 @@ import { Avatar } from '@nextui-org/react';
 
 function Sidebar() {
     return (
-        <div className="hidden sm:flex flex-col p-2 xl:items-start fixed h-full xl:ml-24 bg-white border-r">
+        <div className="hidden sm:flex flex-col p-3 xl:items-start fixed h-full xl:ml-24 bg-white ">
 
             {/* Logo */}
             <div className="hoverEffect p-0 hover:bg-blue-100 xl:px-1">
